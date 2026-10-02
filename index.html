@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gabriel | Desenvolvedor Web</title>
+    <meta name="description" content="Sites modernos, responsivos e profissionais para empresas, profissionais e negócios que querem se destacar na internet.">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Gabriel | Desenvolvedor Web">
+    <meta property="og:description" content="Sites modernos e profissionais para o seu negócio.">
+    <meta property="og:type" content="website">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <header id="header" class="header">
+        <div class="nav-container">
+            <a href="#inicio" class="logo">GABRIEL</a>
+            
+            <nav class="nav-menu" id="navMenu">
+                <ul class="nav-list">
+                    <li><a href="#inicio" class="nav-link">INÍCIO</a></li>
+                    <li><a href="#sobre" class="nav-link">SOBRE</a></li>
+                    <li><a href="#projetos" class="nav-link">PROJETOS</a></li>
+                    <li><a href="#servicos" class="nav-link">SERVIÇOS</a></li>
+                    <li><a href="#precos" class="nav-link">PREÇOS</a></li>
+                    <li><a href="#contato" class="nav-link">CONTATO</a></li>
+                </ul>
+                <div class="nav-action-mobile">
+                    <a href="https://wa.me/5551999999999?text=Olá%20Gabriel,%20vi%20seu%20portfólio%20e%20gostaria%20de%20fazer%20um%20orçamento." target="_blank" class="btn-whatsapp">FAZER UM ORÇAMENTO</a>
+                </div>
+            </nav>
+
+            <div class="nav-action">
+                <a href="https://wa.me/5551999999999?text=Olá%20Gabriel,%20vi%20seu%20portfólio%20e%20gostaria%20de%20fazer%20um%20orçamento." target="_blank" class="btn-primary-sm">FAZER UM ORÇAMENTO</a>
+            </div>
+
+            <button class="hamburger" id="hamburger" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- HERO -->
+        <section id="inicio" class="hero">
+            <div class="container hero-grid">
+                <div class="hero-content">
+                    <span class="badge-tag">DESENVOLVEDOR WEB</span>
+                    <h1 class="hero-title">SEU NEGÓCIO.<br><span class="highlight">SUA PRESENÇA.</span><br>SEU SITE.</h1>
+                    <p class="hero-subtitle-text">Sites modernos para negócios que querem ter uma presença profissional na internet.</p>
+                    <p class="hero-description">"Sites profissionais, modernos e feitos para apresentar sua marca e facilitar o contato com seus clientes."</p>
+                    
+                    <div class="hero-buttons">
+                        <a href="#projetos" class="btn btn-primary">VER PROJETOS</a>
+                        <a href="https://wa.me/5551999999999?text=Olá%20Gabriel,%20vi%20seu%20portfólio%20e%20gostaria%20de%20fazer%20um%20orçamento." target="_blank" class="btn btn-outline">FAZER ORÇAMENTO</a>
+                    </div>
+
+                    <div class="hero-features-tag">
+                        Sites personalizados • Responsivos • Otimizados para celular
+                    </div>
+                </div>
+
+                <div class="hero-image-box">
+                    <div class="profile-frame">
+                        <img src="img/minha-foto.png" alt="Gabriel - Desenvolvedor Web">
+                        <div class="profile-badge">
+                            <span class="status-dot"></span> Disponível para projetos
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SOBRE MIM -->
+        <section id="sobre" class="about section">
+            <div class="container">
+                <div class="about-grid">
+                    <div class="about-image-box">
+                        <div class="profile-frame-sm">
+                            <img src="img/minha-foto.png" alt="Gabriel">
+                        </div>
+                    </div>
+                    <div class="about-content">
+                        <span class="section-tag">QUEM ESTÁ POR TRÁS</span>
+                        <h2 class="section-title">SOBRE MIM</h2>
+                        <p class="about-text">
+                            "Sou Gabriel, estudante de Engenharia de Software e desenvolvedor web. Gosto de transformar ideias em sites modernos, funcionais e visualmente profissionais.<br><br>
+                            Meu foco é criar soluções simples para negócios que precisam apresentar seus serviços, produtos e formas de contato na internet."
+                        </p>
+                        <div class="about-tags">
+                            <span>Engenharia de Software</span>
+                            <span>Desenvolvimento Web</span>
+                            <span>Projetos personalizados</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROJETOS -->
+        <section id="projetos" class="projects section">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-tag">PORTFÓLIO</span>
+                    <h2 class="section-title">PROJETOS</h2>
+                    <p class="section-subtitle">"Alguns exemplos de sites que desenvolvi."</p>
+                </div>
+
+                <div class="projects-grid">
+                    <!-- PROJETO 01 -->
+                    <div class="project-card" data-project="1">
+                        <div class="project-img-wrapper" onclick="openModal(1)">
+                            <img src="img/black-beard.png" alt="Black Beard Barber Shop" loading="lazy">
+                            <div class="project-overlay">
+                                <span class="btn-view-preview">Ver Detalhes</span>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <span class="project-cat">Barbearia</span>
+                            <h3 class="project-name">BLACK BEARD</h3>
+                            <p class="project-desc">"Landing page moderna para uma barbearia, com apresentação dos serviços, galeria, depoimentos, informações de contato e chamada para agendamento."</p>
+                            <div class="project-actions">
+                                <button class="btn btn-sm btn-outline" onclick="openModal(1)">VER PROJETO</button>
+                                <a href="https://barbeariaexemplo-gamma.vercel.app/" target="_blank" class="btn btn-sm btn-primary">VISITAR SITE ↗</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- PROJETO 02 -->
+                    <div class="project-card" data-project="2">
+                        <div class="project-img-wrapper" onclick="openModal(2)">
+                            <img src="img/sabor-brasa.png" alt="Sabor & Brasa Restaurante" loading="lazy">
+                            <div class="project-overlay">
+                                <span class="btn-view-preview">Ver Detalhes</span>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <span class="project-cat">Restaurante</span>
+                            <h3 class="project-name">SABOR & BRASA</h3>
+                            <p class="project-desc">"Site profissional para restaurante, com destaque para o cardápio, apresentação do estabelecimento, galeria, avaliações e contato."</p>
+                            <div class="project-actions">
+                                <button class="btn btn-sm btn-outline" onclick="openModal(2)">VER PROJETO</button>
+                                <a href="https://restauranteexemplo-mu.vercel.app/" target="_blank" class="btn btn-sm btn-primary">VISITAR SITE ↗</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- PROJETO 03 -->
+                    <div class="project-card" data-project="3">
+                        <div class="project-img-wrapper" onclick="openModal(3)">
+                            <img src="img/personal.png" alt="Lucas Almeida Personal Trainer" loading="lazy">
+                            <div class="project-overlay">
+                                <span class="btn-view-preview">Ver Detalhes</span>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <span class="project-cat">Personal Trainer</span>
+                            <h3 class="project-name">LUCAS ALMEIDA</h3>
+                            <p class="project-desc">"Site profissional para personal trainer, apresentando serviços, metodologia, resultados, depoimentos e formas de contato."</p>
+                            <div class="project-actions">
+                                <button class="btn btn-sm btn-outline" onclick="openModal(3)">VER PROJETO</button>
+                                <a href="https://personalexemplo.vercel.app/" target="_blank" class="btn btn-sm btn-primary">VISITAR SITE ↗</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SERVIÇOS -->
+        <section id="servicos" class="services section">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-tag">SOLUÇÕES</span>
+                    <h2 class="section-title">O QUE POSSO FAZER PELO SEU NEGÓCIO</h2>
+                </div>
+
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-num">01</div>
+                        <h3>SITE INSTITUCIONAL</h3>
+                        <p>"Apresente sua empresa, serviços, localização e formas de contato de maneira profissional."</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-num">02</div>
+                        <h3>LANDING PAGE</h3>
+                        <p>"Uma página focada em apresentar seu negócio e transformar visitantes em clientes."</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-num">03</div>
+                        <h3>SITE PARA PROFISSIONAIS</h3>
+                        <p>"Sites personalizados para personal trainers, fotógrafos, barbeiros, salões, profissionais autônomos e outros serviços."</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-num">04</div>
+                        <h3>CARDÁPIO / CATÁLOGO</h3>
+                        <p>"Apresente produtos, serviços, preços e informações de forma organizada e fácil de consultar."</p>
+                    </div>
+                    <div class="service-card service-highlight-card">
+                        <div class="service-num">05</div>
+                        <h3>SITE PERSONALIZADO</h3>
+                        <p>"Um projeto criado de acordo com a identidade e as necessidades do seu negócio."</p>
+                    </div>
+                </div>
+
+                <p class="services-footer-note">"Cada projeto pode ser adaptado ao negócio, identidade visual e objetivo do cliente."</p>
+            </div>
+        </section>
+
+        <!-- PREÇOS -->
+        <section id="precos" class="pricing section">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-tag">INVESTIMENTO</span>
+                    <h2 class="section-title">PLANOS</h2>
+                    <p class="section-subtitle">"Opções para diferentes necessidades."</p>
+                </div>
+
+                <div class="pricing-grid">
+                    <!-- PLANO ESSENCIAL -->
+                    <div class="price-card">
+                        <div class="price-header">
+                            <h3>ESSENCIAL</h3>
+                            <div class="price-value">
+                                <span class="from">A partir de</span>
+                                <span class="amount">R$ 200</span>
+                            </div>
+                        </div>
+                        <ul class="price-features">
+                            <li>✓ Página profissional</li>
+                            <li>✓ Design responsivo</li>
+                            <li>✓ Botão para WhatsApp</li>
+                            <li>✓ Informações do negócio</li>
+                            <li>✓ Links para redes sociais</li>
+                            <li>✓ Publicação do site</li>
+                        </ul>
+                        <a href="https://wa.me/5551999999999?text=Olá%20Gabriel,%20tenho%20interesse%20no%20Plano%20Essencial." target="_blank" class="btn btn-outline btn-full">QUERO ESSE</a>
+                    </div>
+
+                    <!-- PLANO PROFISSIONAL (DESTAQUE) -->
+                    <div class="price-card featured">
+                        <div class="featured-tag">MAIS PROCURADO</div>
+                        <div class="price-header">
+                            <h3>PROFISSIONAL</h3>
+                            <div class="price-value">
+                                <span class="from">A partir de</span>
+                                <span class="amount">R$ 400</span>
+                            </div>
+                        </div>
+                        <ul class="price-features">
+                            <li>✓ Site com várias seções</li>
+                            <li>✓ Design personalizado</li>
+                            <li>✓ Galeria de imagens</li>
+                            <li>✓ Serviços / produtos</li>
+                            <li>✓ WhatsApp integrado</li>
+                            <li>✓ Banco de dados</li>
+                            <li>✓ Localização e Redes</li>
+                            <li>✓ Publicação do site</li>
+                        </ul>
+                        <a href="https://wa.me/5551999999999?text=Olá%20Gabriel,%20tenho%20interesse%20no%20Plano%20Profissional." target="_blank" class="btn btn-primary btn-full">QUERO ESSE</a>
+                    </div>
+
+                    <!-- PLANO PERSONALIZADO -->
+                    <div class="price-card">
+                        <div class="price-header">
+                            <h3>PERSONALIZADO</h3>
+                            <div class="price-value">
+                                <span class="from">Sob consulta</span>
+                                <span class="amount">CONSULTE</span>
+                            </div>
+                        </div>
+                        <ul class="price-features">
+                            <li>✓ Projeto totalmente sob medida</li>
+                            <li>✓ Funcionalidades específicas</li>
+                            <li>✓ Estrutura adaptada ao negócio</li>
+                            <li>✓ Orçamento conforme necessidade</li>
+                        </ul>
+                        <a href="https://wa.me/5551999999999?text=Olá%20Gabriel,%20gostaria%20de%20fazer%20um%20orçamento%20personalizado." target="_blank" class="btn btn-outline btn-full">FAZER ORÇAMENTO</a>
+                    </div>
+                </div>
+
+                <p class="pricing-note">"Os valores são iniciais e podem variar conforme a complexidade e as necessidades de cada projeto."</p>
+            </div>
+        </section>
+
+        <!-- COMO FUNCIONA -->
+        <section class="process section">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-tag">ETAPAS</span>
+                    <h2 class="section-title">COMO FUNCIONA</h2>
+                </div>
+
+                <div class="process-grid">
+                    <div class="process-item">
+                        <div class="process-number">01</div>
+                        <h3>VOCÊ ME CONTA SUA IDEIA</h3>
+                        <p>"Conversamos sobre seu negócio, seus objetivos e o que você precisa."</p>
+                    </div>
+                    <div class="process-item">
+                        <div class="process-number">02</div>
+                        <h3>EU CRIO O SITE</h3>
+                        <p>"Desenvolvo o visual e a estrutura pensando na sua marca e no seu público."</p>
+                    </div>
+                    <div class="process-item">
+                        <div class="process-number">03</div>
+                        <h3>VOCÊ APROVA</h3>
+                        <p>"Faço os ajustes necessários para deixar o projeto do jeito que você imaginou."</p>
+                    </div>
+                    <div class="process-item">
+                        <div class="process-number">04</div>
+                        <h3>SEU SITE VAI PARA O AR</h3>
+                        <p>"Depois da aprovação, o site é publicado e fica disponível para seus clientes."</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- DIFERENCIAIS -->
+        <section class="differentials section">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-tag">VANTAGENS</span>
+                    <h2 class="section-title">POR QUE TER UM SITE?</h2>
+                </div>
+
+                <div class="diff-grid">
+                    <div class="diff-card">
+                        <div class="diff-icon">🎯</div>
+                        <h3>VISUAL PROFISSIONAL</h3>
+                        <p>"Passe mais confiança para seus clientes."</p>
+                    </div>
+                    <div class="diff-card">
+                        <div class="diff-icon">📱</div>
+                        <h3>ACESSO PELO CELULAR</h3>
+                        <p>"Seu negócio disponível em qualquer lugar."</p>
+                    </div>
+                    <div class="diff-card">
+                        <div class="diff-icon">💬</div>
+                        <h3>CONTATO FACILITADO</h3>
+                        <p>"Botões para WhatsApp, Instagram e outras formas de contato."</p>
+                    </div>
+                    <div class="diff-card">
+                        <div class="diff-icon">🌐</div>
+                        <h3>SUA MARCA NA INTERNET</h3>
+                        <p>"Tenha um espaço próprio para apresentar seu negócio."</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA IMPACTANTE -->
+        <section class="cta-banner section">
+            <div class="container text-center">
+                <h2 class="cta-title">SEU NEGÓCIO MERECE UM SITE À ALTURA.</h2>
+                <p class="cta-desc">"Vamos transformar sua ideia em uma presença profissional na internet."</p>
+                <div class="cta-buttons">
+                    <a href="https://wa.me/5551999999999?text=Olá%20Gabriel,%20quero%20fazer%20meu%20orçamento." target="_blank" class="btn btn-primary btn-lg">FAZER MEU ORÇAMENTO</a>
+                    <a href="#projetos" class="btn btn-outline btn-lg">VER PROJETOS</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTATO -->
+        <section id="contato" class="contact section">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-tag">FALE COMIGO</span>
+                    <h2 class="section-title">SOLICITE SEU ORÇAMENTO</h2>
+                </div>
+
+                <div class="contact-grid">
+                    <div class="contact-info-box">
+                        <h3>Vamos conversar sobre seu projeto?</h3>
+                        <p>Preencha o formulário ou entre em contato diretamente pelos canais abaixo. Retorno rápido para tirar suas dúvidas.</p>
+                        
+                        <div class="contact-channels">
+                            <a href="https://wa.me/5551999999999?text=Olá%20Gabriel,%20gostaria%20de%20falar%20sobre%20um%20site." target="_blank" class="channel-item">
+                                <span class="channel-icon">💬</span>
+                                <div>
+                                    <strong>WhatsApp</strong>
+                                    <span>(51) 99999-9999</span>
+                                </div>
+                            </a>
+                            <a href="https://instagram.com" target="_blank" class="channel-item">
+                                <span class="channel-icon">📸</span>
+                                <div>
+                                    <strong>Instagram</strong>
+                                    <span>@gabriel.devweb</span>
+                                </div>
+                            </a>
+                            <a href="mailto:contato@gabrieldev.com" class="channel-item">
+                                <span class="channel-icon">✉️</span>
+                                <div>
+                                    <strong>E-mail</strong>
+                                    <span>contato@gabrieldev.com</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <form id="contactForm" class="contact-form" onsubmit="sendWhatsAppMessage(event)">
+                        <div class="form-group">
+                            <label for="nome">Seu Nome</label>
+                            <input type="text" id="nome" required placeholder="Ex: João Silva">
+                        </div>
+                        <div class="form-group">
+                            <label for="whatsapp">Seu WhatsApp</label>
+                            <input type="tel" id="whatsapp" required placeholder="Ex: (51) 99999-9999">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Seu E-mail</label>
+                            <input type="email" id="email" placeholder="Ex: joao@email.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="negocio">Tipo de Negócio</label>
+                            <input type="text" id="negocio" required placeholder="Ex: Barbearia, Restaurante, Personal...">
+                        </div>
+                        <div class="form-group">
+                            <label for="mensagem">Mensagem / Ideia</label>
+                            <textarea id="mensagem" rows="4" required placeholder="Conte um pouco sobre o que você precisa..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full">SOLICITAR ORÇAMENTO</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <span class="footer-logo">GABRIEL</span>
+                <p class="footer-desc">Desenvolvimento web para negócios que querem crescer.</p>
+            </div>
+            <div class="footer-links">
+                <a href="#inicio">Início</a>
+                <a href="#projetos">Projetos</a>
+                <a href="#servicos">Serviços</a>
+                <a href="#precos">Preços</a>
+                <a href="#contato">Contato</a>
+            </div>
+            <div class="footer-socials">
+                <a href="https://wa.me/5551999999999" target="_blank">WhatsApp</a>
+                <a href="https://instagram.com" target="_blank">Instagram</a>
+                <a href="mailto:contato@gabrieldev.com">E-mail</a>
+            </div>
+            <p class="footer-copy">© 2026 Gabriel. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- MODAL / PREVIEW DOS PROJETOS -->
+    <div id="projectModal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal()">&times;</button>
+            <img id="modalImage" src="" alt="Preview">
+            <div class="modal-body">
+                <span id="modalCat" class="modal-category"></span>
+                <h3 id="modalTitle"></h3>
+                <p id="modalDesc"></p>
+                <div id="modalLinkBox"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- BOTÃO FLUTUANTE WHATSAPP -->
+    <a href="https://wa.me/5551999999999?text=Olá%20Gabriel,%20vi%20seu%20portfólio%20e%20gostaria%20de%20falar%20sobre%20um%20site." target="_blank" class="whatsapp-float" aria-label="Fale conosco no WhatsApp">
+        💬
+    </a>
+
+    <!-- SCRIPT JS -->
+    <script src="js/script.js"></script>
+</body>
+</html>
