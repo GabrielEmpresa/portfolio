@@ -120,6 +120,6 @@ function sendWhatsAppMessage(event) {
     const texto = `Olá Gabriel! Meu nome é *${nome}* (${whatsapp}).\nMeu negócio é do ramo de *${negocio}* e tenho interesse em criar um site.\n\nDetalhes:\n${mensagem}\n\nE-mail: ${email}`;
     const textoCodificado = encodeURIComponent(texto);
     
-    const urlWhatsApp = `https://wa.me/5551999999999?text=${textoCodificado}`;
+    const urlWhatsApp = `https://wa.me/5551992934189?text=${textoCodificado}`;
     window.open(urlWhatsApp, '_blank');
 }
