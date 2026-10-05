@@ -1,487 +1,429 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gabriel | Desenvolvedor Web</title>
-    <meta name="description" content="Sites modernos, responsivos e profissionais para empresas, profissionais e negócios que querem se destacar na internet.">
+    <title>Gabriel | Criação de Sites Profissionais</title>
+    <meta name="description" content="Sites modernos, responsivos e personalizados para empresas e profissionais que querem apresentar seus serviços de forma profissional na internet.">
     
-    <!-- Open Graph -->
-    <meta property="og:title" content="Gabriel | Desenvolvedor Web">
-    <meta property="og:description" content="Sites modernos e profissionais para o seu negócio.">
-    <meta property="og:type" content="website">
-
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
-    <!-- Stylesheet -->
+    <!-- Configuração de Cores Customizadas do Tailwind (Necessário manter aqui para o CDN) -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
+                    colors: {
+                        gold: '#EAB308',
+                        goldHover: '#CA8A04',
+                        darkBg: '#09090b',
+                        darkCard: '#18181b',
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- SEU ARQUIVO CSS EXTERNO -->
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body class="antialiased selection:bg-gold selection:text-black">
 
-    <!-- NAVBAR -->
-    <header id="header" class="header">
-        <div class="nav-container">
-            <a href="#inicio" class="logo">GABRIEL</a>
-            
-            <nav class="nav-menu" id="navMenu">
-                <ul class="nav-list">
-                    <li><a href="#inicio" class="nav-link">INÍCIO</a></li>
-                    <li><a href="#sobre" class="nav-link">SOBRE</a></li>
-                    <li><a href="#projetos" class="nav-link">PROJETOS</a></li>
-                    <li><a href="#servicos" class="nav-link">SERVIÇOS</a></li>
-                    <li><a href="#precos" class="nav-link">PREÇOS</a></li>
-                    <li><a href="#contato" class="nav-link">CONTATO</a></li>
-                </ul>
-                <div class="nav-action-mobile">
-                    <a href="https://wa.me/5551992934189?text=Olá%20Gabriel,%20vi%20seu%20portfólio%20e%20gostaria%20de%20fazer%20um%20orçamento." target="_blank" class="btn-whatsapp">FAZER UM ORÇAMENTO</a>
+    <!-- MENU -->
+    <nav class="fixed w-full z-50 glass-nav border-b border-zinc-800 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0">
+                    <a href="#" class="text-2xl font-bold tracking-tighter text-white">GABRIEL<span class="text-gold">.</span></a>
                 </div>
-            </nav>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#inicio" class="text-sm font-medium text-zinc-300 hover:text-gold transition">INÍCIO</a>
+                    <a href="#sobre" class="text-sm font-medium text-zinc-300 hover:text-gold transition">SOBRE</a>
+                    <a href="#projetos" class="text-sm font-medium text-zinc-300 hover:text-gold transition">PROJETOS</a>
+                    <a href="#servicos" class="text-sm font-medium text-zinc-300 hover:text-gold transition">SERVIÇOS</a>
+                    <a href="#precos" class="text-sm font-medium text-zinc-300 hover:text-gold transition">PREÇOS</a>
+                    <a href="#contato" class="text-sm font-medium bg-gold text-black px-5 py-2 rounded-md hover:bg-goldHover transition duration-300 shadow-lg shadow-gold/20">FAZER ORÇAMENTO</a>
+                </div>
 
-            <div class="nav-action">
-                <a href="https://wa.me/5551992934189?text=Olá%20Gabriel,%20vi%20seu%20portfólio%20e%20gostaria%20de%20fazer%20um%20orçamento." target="_blank" class="btn-primary-sm">FAZER UM ORÇAMENTO</a>
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-zinc-300 hover:text-white focus:outline-none text-2xl">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                </div>
             </div>
-
-            <button class="hamburger" id="hamburger" aria-label="Menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
         </div>
-    </header>
 
-    <main>
-        <!-- HERO -->
-        <section id="inicio" class="hero">
-            <div class="container hero-grid">
-                <div class="hero-content">
-                    <span class="badge-tag">DESENVOLVEDOR WEB</span>
-                    <h1 class="hero-title">SEU NEGÓCIO.<br><span class="highlight">SUA PRESENÇA.</span><br>SEU SITE.</h1>
-                    <p class="hero-subtitle-text">Sites modernos para negócios que querem ter uma presença profissional na internet.</p>
-                    <p class="hero-description">"Sites profissionais, modernos e feitos para apresentar sua marca e facilitar o contato com seus clientes."</p>
-                    
-                    <div class="hero-buttons">
-                        <a href="#projetos" class="btn btn-primary">VER PROJETOS</a>
-                        <a href="https://wa.me/5551992934189?text=Olá%20Gabriel,%20vi%20seu%20portfólio%20e%20gostaria%20de%20fazer%20um%20orçamento." target="_blank" class="btn btn-outline">FAZER ORÇAMENTO</a>
-                    </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-darkCard border-b border-zinc-800 absolute w-full">
+            <div class="px-4 pt-2 pb-6 space-y-2 flex flex-col text-center">
+                <a href="#inicio" class="mobile-link block px-3 py-3 text-base font-medium text-zinc-300 hover:text-gold">INÍCIO</a>
+                <a href="#sobre" class="mobile-link block px-3 py-3 text-base font-medium text-zinc-300 hover:text-gold">SOBRE</a>
+                <a href="#projetos" class="mobile-link block px-3 py-3 text-base font-medium text-zinc-300 hover:text-gold">PROJETOS</a>
+                <a href="#servicos" class="mobile-link block px-3 py-3 text-base font-medium text-zinc-300 hover:text-gold">SERVIÇOS</a>
+                <a href="#precos" class="mobile-link block px-3 py-3 text-base font-medium text-zinc-300 hover:text-gold">PREÇOS</a>
+                <a href="#contato" class="mobile-link block mt-4 mx-4 bg-gold text-black px-5 py-3 rounded-md font-medium">FAZER ORÇAMENTO</a>
+            </div>
+        </div>
+    </nav>
 
-                    <div class="hero-features-tag">
-                        Sites personalizados • Responsivos • Otimizados para celular
+    <!-- HERO -->
+    <section id="inicio" class="pt-32 pb-20 lg:pt-48 lg:pb-32 px-4 flex flex-col items-center text-center max-w-5xl mx-auto">
+        <p class="text-gold font-medium text-sm tracking-widest uppercase mb-4">Sites personalizados • Responsivos • Otimizados para celular</p>
+        <h1 class="text-5xl lg:text-7xl font-bold text-white tracking-tight mb-6 leading-tight">
+            SEU NEGÓCIO. <br/>SUA PRESENÇA. <br/><span class="text-gold">SEU SITE.</span>
+        </h1>
+        <p class="text-lg lg:text-xl text-zinc-400 mb-10 max-w-2xl leading-relaxed">
+            Sites modernos, responsivos e personalizados para empresas e profissionais que querem apresentar seus serviços de forma profissional na internet.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
+            <a href="#projetos" class="px-8 py-4 border border-zinc-700 text-white rounded-md hover:border-gold hover:text-gold transition duration-300 font-medium w-full sm:w-auto">VER PROJETOS</a>
+            <a href="#contato" class="px-8 py-4 bg-gold text-black rounded-md hover:bg-goldHover transition duration-300 font-medium shadow-lg shadow-gold/20 w-full sm:w-auto">FAZER UM ORÇAMENTO</a>
+        </div>
+    </section>
+
+    <!-- POR QUE TER UM SITE? -->
+    <section class="py-20 bg-darkCard border-y border-zinc-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="p-6">
+                    <i class="fa-solid fa-gem text-gold text-3xl mb-4"></i>
+                    <h3 class="text-xl font-semibold text-white mb-2">Visual Profissional</h3>
+                    <p class="text-zinc-400 text-sm">Passe mais confiança e credibilidade para seus clientes no primeiro contato.</p>
+                </div>
+                <div class="p-6">
+                    <i class="fa-solid fa-mobile-screen-button text-gold text-3xl mb-4"></i>
+                    <h3 class="text-xl font-semibold text-white mb-2">Acesso pelo Celular</h3>
+                    <p class="text-zinc-400 text-sm">Seu negócio perfeitamente adaptado e disponível para seus clientes em qualquer lugar.</p>
+                </div>
+                <div class="p-6">
+                    <i class="fa-brands fa-whatsapp text-gold text-3xl mb-4"></i>
+                    <h3 class="text-xl font-semibold text-white mb-2">Contato Facilitado</h3>
+                    <p class="text-zinc-400 text-sm">Facilite o contato através do WhatsApp, redes sociais e formulários diretos.</p>
+                </div>
+                <div class="p-6">
+                    <i class="fa-solid fa-globe text-gold text-3xl mb-4"></i>
+                    <h3 class="text-xl font-semibold text-white mb-2">Sua Marca na Internet</h3>
+                    <p class="text-zinc-400 text-sm">Tenha um espaço próprio, seguro e exclusivo para apresentar sua empresa.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SOBRE -->
+    <section id="sobre" class="py-24 max-w-5xl mx-auto px-4">
+        <div class="flex flex-col md:flex-row items-center gap-12">
+            <div class="w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-zinc-800 shadow-2xl flex-shrink-0">
+                <img src="img/minha-foto.png" alt="Gabriel Molinari" class="w-full h-full object-cover">
+            </div>
+            <div class="text-center md:text-left">
+                <h2 class="text-gold font-medium text-sm tracking-widest uppercase mb-3">Conheça o desenvolvedor</h2>
+                <h3 class="text-3xl md:text-4xl font-bold text-white mb-6">Gabriel — Desenvolvedor Web</h3>
+                <p class="text-zinc-400 text-lg leading-relaxed">
+                    Sou estudante de Engenharia de Software e desenvolvedor web, focado na criação de sites modernos, responsivos e personalizados para empresas e profissionais autônomos. Meu objetivo é transformar sua ideia em uma ferramenta de vendas e captação de clientes através de um design limpo, rápido e focado em resultados.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- COMO FUNCIONA -->
+    <section class="py-24 bg-darkCard border-y border-zinc-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-gold font-medium text-sm tracking-widest uppercase mb-3">Processo simplificado</h2>
+                <h3 class="text-3xl md:text-4xl font-bold text-white">COMO FUNCIONA</h3>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 relative">
+                <div class="hidden md:block absolute top-12 left-[12%] right-[12%] h-0.5 bg-zinc-800 z-0"></div>
+                
+                <div class="relative z-10 flex flex-col items-center text-center">
+                    <div class="w-24 h-24 rounded-full bg-darkBg border-2 border-gold flex items-center justify-center text-gold text-2xl font-bold mb-6 shadow-lg shadow-gold/10">01</div>
+                    <h4 class="text-lg font-semibold text-white mb-2">Você me conta sua ideia</h4>
+                    <p class="text-sm text-zinc-400">Conversamos sobre seu negócio, objetivos e necessidades específicas.</p>
+                </div>
+                <div class="relative z-10 flex flex-col items-center text-center">
+                    <div class="w-24 h-24 rounded-full bg-darkBg border-2 border-gold flex items-center justify-center text-gold text-2xl font-bold mb-6 shadow-lg shadow-gold/10">02</div>
+                    <h4 class="text-lg font-semibold text-white mb-2">Eu crio o site</h4>
+                    <p class="text-sm text-zinc-400">Desenvolvo o visual e a estrutura pensando na sua marca e no seu público.</p>
+                </div>
+                <div class="relative z-10 flex flex-col items-center text-center">
+                    <div class="w-24 h-24 rounded-full bg-darkBg border-2 border-gold flex items-center justify-center text-gold text-2xl font-bold mb-6 shadow-lg shadow-gold/10">03</div>
+                    <h4 class="text-lg font-semibold text-white mb-2">Você aprova</h4>
+                    <p class="text-sm text-zinc-400">Você avalia o projeto, revisamos os detalhes e podemos realizar ajustes.</p>
+                </div>
+                <div class="relative z-10 flex flex-col items-center text-center">
+                    <div class="w-24 h-24 rounded-full bg-darkBg border-2 border-gold flex items-center justify-center text-gold text-2xl font-bold mb-6 shadow-lg shadow-gold/10">04</div>
+                    <h4 class="text-lg font-semibold text-white mb-2">Seu site vai para o ar</h4>
+                    <p class="text-sm text-zinc-400">Após a aprovação final, o site é publicado e está pronto para receber clientes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJETOS -->
+    <section id="projetos" class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+            <h2 class="text-gold font-medium text-sm tracking-widest uppercase mb-3">Portfólio</h2>
+            <h3 class="text-3xl md:text-4xl font-bold text-white mb-4">PROJETOS DEMONSTRATIVOS</h3>
+            <p class="text-zinc-400 max-w-2xl mx-auto">Projetos demonstrativos desenvolvidos para representar soluções reais para diferentes tipos de negócio.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="group bg-darkCard rounded-lg border border-zinc-800 overflow-hidden hover:border-gold/50 transition duration-300 flex flex-col">
+                <div class="h-56 bg-zinc-800 overflow-hidden relative">
+                    <img src="img/black-beard.png" alt="Black Beard Barber Shop" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <a href="https://barbeariaexemplo-gamma.vercel.app/" target="_blank" class="px-6 py-2 bg-gold text-black font-semibold rounded-md transform translate-y-4 group-hover:translate-y-0 transition duration-300">Visualizar</a>
                     </div>
                 </div>
+                <div class="p-6 flex flex-col flex-grow">
+                    <p class="text-xs text-gold font-semibold tracking-wide uppercase mb-1">Barbearia / Estética</p>
+                    <h4 class="text-xl font-bold text-white mb-2">Black Beard Barber Shop</h4>
+                    <p class="text-zinc-400 text-sm mb-6 flex-grow">Site institucional elegante focado em barbearias, com apresentação de serviços, equipe e fácil agendamento.</p>
+                    <a href="https://barbeariaexemplo-gamma.vercel.app/" target="_blank" class="w-full text-center py-2.5 border border-zinc-700 text-zinc-300 rounded hover:bg-zinc-800 transition">VISITAR SITE</a>
+                </div>
+            </div>
 
-                <div class="hero-image-box">
-                    <div class="profile-frame">
-                        <img src="img/minha-foto.png" alt="Gabriel - Desenvolvedor Web">
-                        <div class="profile-badge">
-                            <span class="status-dot"></span> Disponível para projetos
-                        </div>
+            <div class="group bg-darkCard rounded-lg border border-zinc-800 overflow-hidden hover:border-gold/50 transition duration-300 flex flex-col">
+                <div class="h-56 bg-zinc-800 overflow-hidden relative">
+                    <img src="img/sabor-brasa.png" alt="Sabor & Brasa" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <a href="https://restauranteexemplo-mu.vercel.app/" target="_blank" class="px-6 py-2 bg-gold text-black font-semibold rounded-md transform translate-y-4 group-hover:translate-y-0 transition duration-300">Visualizar</a>
+                    </div>
+                </div>
+                <div class="p-6 flex flex-col flex-grow">
+                    <p class="text-xs text-gold font-semibold tracking-wide uppercase mb-1">Restaurante / Delivery</p>
+                    <h4 class="text-xl font-bold text-white mb-2">Sabor & Brasa</h4>
+                    <p class="text-zinc-400 text-sm mb-6 flex-grow">Design atrativo para o setor gastronômico, ideal para destacar cardápios, ambiente e pedidos via WhatsApp.</p>
+                    <a href="https://restauranteexemplo-mu.vercel.app/" target="_blank" class="w-full text-center py-2.5 border border-zinc-700 text-zinc-300 rounded hover:bg-zinc-800 transition">VISITAR SITE</a>
+                </div>
+            </div>
+
+            <div class="group bg-darkCard rounded-lg border border-zinc-800 overflow-hidden hover:border-gold/50 transition duration-300 flex flex-col">
+                <div class="h-56 bg-zinc-800 overflow-hidden relative">
+                    <img src="img/personal.png" alt="Lucas Almeida Personal" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <a href="https://personalexemplo.vercel.app/" target="_blank" class="px-6 py-2 bg-gold text-black font-semibold rounded-md transform translate-y-4 group-hover:translate-y-0 transition duration-300">Visualizar</a>
+                    </div>
+                </div>
+                <div class="p-6 flex flex-col flex-grow">
+                    <p class="text-xs text-gold font-semibold tracking-wide uppercase mb-1">Profissional Autônomo</p>
+                    <h4 class="text-xl font-bold text-white mb-2">Lucas Almeida Personal</h4>
+                    <p class="text-zinc-400 text-sm mb-6 flex-grow">Página de alta conversão para personal trainers ou consultores que desejam atrair mais alunos pela internet.</p>
+                    <a href="https://personalexemplo.vercel.app/" target="_blank" class="w-full text-center py-2.5 border border-zinc-700 text-zinc-300 rounded hover:bg-zinc-800 transition">VISITAR SITE</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVIÇOS -->
+    <section id="servicos" class="py-24 bg-darkCard border-y border-zinc-800">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-gold font-medium text-sm tracking-widest uppercase mb-3">Especialidades</h2>
+                <h3 class="text-3xl md:text-4xl font-bold text-white mb-4">O QUE POSSO FAZER PELO SEU NEGÓCIO</h3>
+            </div>
+
+            <div class="space-y-6">
+                <div class="flex gap-6 items-start p-6 rounded-lg hover:bg-zinc-800/50 transition border border-transparent hover:border-zinc-800">
+                    <span class="text-gold font-bold text-2xl mt-1">01</span>
+                    <div>
+                        <h4 class="text-xl font-bold text-white mb-2">SITE INSTITUCIONAL</h4>
+                        <p class="text-zinc-400">Site profissional para apresentar sua empresa, diferenciais, serviços, localização e formas de contato de forma clara e moderna.</p>
+                    </div>
+                </div>
+                <div class="flex gap-6 items-start p-6 rounded-lg hover:bg-zinc-800/50 transition border border-transparent hover:border-zinc-800">
+                    <span class="text-gold font-bold text-2xl mt-1">02</span>
+                    <div>
+                        <h4 class="text-xl font-bold text-white mb-2">LANDING PAGE</h4>
+                        <p class="text-zinc-400">Página de alta conversão focada em apresentar um único produto, serviço ou campanha para gerar contatos rapidamente.</p>
+                    </div>
+                </div>
+                <div class="flex gap-6 items-start p-6 rounded-lg hover:bg-zinc-800/50 transition border border-transparent hover:border-zinc-800">
+                    <span class="text-gold font-bold text-2xl mt-1">03</span>
+                    <div>
+                        <h4 class="text-xl font-bold text-white mb-2">SITE PARA PROFISSIONAIS</h4>
+                        <p class="text-zinc-400">Soluções digitais para personal trainers, barbeiros, psicólogos, corretores, fotógrafos e profissionais autônomos.</p>
+                    </div>
+                </div>
+                <div class="flex gap-6 items-start p-6 rounded-lg hover:bg-zinc-800/50 transition border border-transparent hover:border-zinc-800">
+                    <span class="text-gold font-bold text-2xl mt-1">04</span>
+                    <div>
+                        <h4 class="text-xl font-bold text-white mb-2">CARDÁPIO / CATÁLOGO</h4>
+                        <p class="text-zinc-400">Apresentação organizada e visual dos seus produtos, serviços, preços e informações vitais para fechar vendas.</p>
+                    </div>
+                </div>
+                <div class="flex gap-6 items-start p-6 rounded-lg hover:bg-zinc-800/50 transition border border-transparent hover:border-zinc-800">
+                    <span class="text-gold font-bold text-2xl mt-1">05</span>
+                    <div>
+                        <h4 class="text-xl font-bold text-white mb-2">SITE PERSONALIZADO</h4>
+                        <p class="text-zinc-400">Projeto completo desenvolvido exclusivamente de acordo com as necessidades específicas e a identidade visual do seu negócio.</p>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- SOBRE MIM -->
-        <section id="sobre" class="about section">
-            <div class="container">
-                <div class="about-grid">
-                    <div class="about-image-box">
-                        <div class="profile-frame-sm">
-                            <img src="img/minha-foto.png" alt="Gabriel">
+    <!-- PREÇOS -->
+    <section id="precos" class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">PLANOS</h2>
+            <p class="text-zinc-400 text-lg">Opções para diferentes necessidades.</p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center max-w-5xl mx-auto">
+            <div class="bg-darkCard rounded-xl p-8 border border-zinc-800">
+                <h4 class="text-xl font-bold text-white mb-2">ESSENCIAL</h4>
+                <div class="mb-6">
+                    <span class="text-sm text-zinc-400">A partir de</span>
+                    <div class="text-3xl font-bold text-gold">R$ 200</div>
+                </div>
+                <ul class="space-y-4 mb-8 text-zinc-300 text-sm">
+                    <li class="flex items-center gap-3"><i class="fa-solid fa-check text-gold"></i> Página profissional</li>
+                    <li class="flex items-center gap-3"><i class="fa-solid fa-check text-gold"></i> Design responsivo (celular)</li>
+                    <li class="flex items-center gap-3"><i class="fa-solid fa-check text-gold"></i> Botão WhatsApp</li>
+                    <li class="flex items-center gap-3"><i class="fa-solid fa-check text-gold"></i> Informações do negócio</li>
+                    <li class="flex items-center gap-3"><i class="fa-solid fa-check text-gold"></i> Links para Redes sociais</li>
+                    <li class="flex items-center gap-3"><i class="fa-solid fa-check text-gold"></i> Publicação do site</li>
+                </ul>
+                <a href="#contato" class="block w-full text-center py-3 border border-zinc-700 text-white rounded hover:bg-zinc-800 transition font-medium">QUERO ESSE</a>
+            </div>
+
+            <div class="bg-zinc-900 rounded-xl p-8 border-2 border-gold transform lg:-translate-y-4 shadow-2xl shadow-gold/10 relative">
+                <div class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gold text-black text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Mais Escolhido</div>
+                <h4 class="text-xl font-bold text-white mb-2">PROFISSIONAL</h4>
+                <div class="mb-6">
+                    <span class="text-sm text-zinc-400">A partir de</span>
+                    <div class="text-4xl font-bold text-gold">R$ 400</div>
+                </div>
+                <ul class="space-y-4 mb-8 text-zinc-300 text-sm">
+                    <li class="flex items-center gap-3"><i class="fa-solid fa-check text-gold"></i> Múltiplas seções estruturadas</li>
+                    <li class="flex items-center gap-3"><i class="fa-solid fa-check text-gold"></i> Design personalizado à marca</li>
+                    <li class="flex items-center gap-3"><i class="fa-solid fa-check text-gold"></i> Galeria de imagens/portfólio</li>
+                    <li class="flex items-center gap-3"><i class="fa-solid fa-check text-gold"></i> Área de Serviços/Produtos</li>
+                    <li class="flex items-center gap-3"><i class="fa-solid fa-check text-gold"></i> Botão flutuante WhatsApp</li>
+                    <li class="flex items-center gap-3"><i class="fa-solid fa-check text-gold"></i> Mapa de localização</li>
+                    <li class="flex items-center gap-3"><i class="fa-solid fa-check text-gold"></i> Links para Redes sociais</li>
+                    <li class="flex items-center gap-3"><i class="fa-solid fa-check text-gold"></i> Publicação e otimização inicial</li>
+                </ul>
+                <a href="#contato" class="block w-full text-center py-3 bg-gold text-black rounded hover:bg-goldHover transition font-bold shadow-lg shadow-gold/20">QUERO ESSE</a>
+            </div>
+
+            <div class="bg-darkCard rounded-xl p-8 border border-zinc-800">
+                <h4 class="text-xl font-bold text-white mb-2">PERSONALIZADO</h4>
+                <div class="mb-6">
+                    <span class="text-sm text-zinc-400">Valor</span>
+                    <div class="text-3xl font-bold text-gold">Consulte</div>
+                </div>
+                <ul class="space-y-4 mb-8 text-zinc-300 text-sm">
+                    <li class="flex items-center gap-3"><i class="fa-solid fa-check text-gold"></i> Projeto 100% sob demanda</li>
+                    <li class="flex items-center gap-3"><i class="fa-solid fa-check text-gold"></i> Estrutura adaptada</li>
+                    <li class="flex items-center gap-3"><i class="fa-solid fa-check text-gold"></i> Funcionalidades específicas</li>
+                    <li class="flex items-center gap-3"><i class="fa-solid fa-check text-gold"></i> Multi-páginas (se necessário)</li>
+                    <li class="flex items-center gap-3"><i class="fa-solid fa-check text-gold"></i> Orçamento conforme necessidade</li>
+                </ul>
+                <a href="#contato" class="block w-full text-center py-3 border border-zinc-700 text-white rounded hover:bg-zinc-800 transition font-medium">FAZER ORÇAMENTO</a>
+            </div>
+        </div>
+        <p class="text-center text-zinc-500 text-sm mt-10 max-w-2xl mx-auto">
+            * Os valores são iniciais e podem variar conforme a complexidade e as necessidades específicas de cada projeto. Entre em contato para um orçamento exato.
+        </p>
+    </section>
+
+    <!-- CTA PRÉ-CONTATO -->
+    <section class="py-24 bg-gold relative overflow-hidden">
+        <div class="absolute inset-0 bg-black/10"></div>
+        <div class="max-w-4xl mx-auto px-4 relative z-10 text-center">
+            <h2 class="text-3xl md:text-5xl font-bold text-black mb-6 tracking-tight">SEU NEGÓCIO MERECE UM SITE À ALTURA.</h2>
+            <p class="text-black/80 text-lg md:text-xl font-medium mb-10">Vamos transformar sua ideia em uma presença profissional na internet.</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#contato" class="px-8 py-4 bg-black text-white rounded-md hover:bg-zinc-900 transition duration-300 font-bold shadow-xl">FAZER MEU ORÇAMENTO</a>
+                <a href="#projetos" class="px-8 py-4 border-2 border-black text-black rounded-md hover:bg-black hover:text-white transition duration-300 font-bold">VER PROJETOS</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTATO -->
+    <section id="contato" class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+            
+            <div>
+                <h2 class="text-gold font-medium text-sm tracking-widest uppercase mb-3">Vamos conversar</h2>
+                <h3 class="text-3xl md:text-4xl font-bold text-white mb-6">SOLICITE UM ORÇAMENTO</h3>
+                <p class="text-zinc-400 mb-10 text-lg">
+                    Preencha o formulário para me contar um pouco sobre o que você precisa. Entrarei em contato o mais rápido possível para conversarmos.
+                </p>
+                
+                <div class="space-y-6">
+                    <a href="https://wa.me/5551992934189" target="_blank" class="flex items-center gap-4 text-zinc-300 hover:text-gold transition group">
+                        <div class="w-12 h-12 bg-darkCard border border-zinc-800 rounded-full flex items-center justify-center group-hover:border-gold transition">
+                            <i class="fa-brands fa-whatsapp text-xl"></i>
                         </div>
-                    </div>
-                    <div class="about-content">
-                        <span class="section-tag">QUEM ESTÁ POR TRÁS</span>
-                        <h2 class="section-title">SOBRE MIM</h2>
-                        <p class="about-text">
-                            "Sou Gabriel, estudante de Engenharia de Software e desenvolvedor web. Gosto de transformar ideias em sites modernos, funcionais e visualmente profissionais.<br><br>
-                            Meu foco é criar soluções simples para negócios que precisam apresentar seus serviços, produtos e formas de contato na internet."
-                        </p>
-                        <div class="about-tags">
-                            <span>Engenharia de Software</span>
-                            <span>Desenvolvimento Web</span>
-                            <span>Projetos personalizados</span>
+                        <span class="text-lg font-medium">(51) 99293-4189</span>
+                    </a>
+                    <a href="https://instagram.com/gabriel_molinari" target="_blank" class="flex items-center gap-4 text-zinc-300 hover:text-gold transition group">
+                        <div class="w-12 h-12 bg-darkCard border border-zinc-800 rounded-full flex items-center justify-center group-hover:border-gold transition">
+                            <i class="fa-brands fa-instagram text-xl"></i>
                         </div>
-                    </div>
+                        <span class="text-lg font-medium">@gabriel_molinari</span>
+                    </a>
                 </div>
             </div>
-        </section>
 
-        <!-- PROJETOS -->
-        <section id="projetos" class="projects section">
-            <div class="container">
-                <div class="section-header text-center">
-                    <span class="section-tag">PORTFÓLIO</span>
-                    <h2 class="section-title">PROJETOS</h2>
-                    <p class="section-subtitle">"Alguns exemplos de sites que desenvolvi."</p>
-                </div>
-
-                <div class="projects-grid">
-                    <!-- PROJETO 01 -->
-                    <div class="project-card" data-project="1">
-                        <div class="project-img-wrapper" onclick="openModal(1)">
-                            <img src="img/black-beard.png" alt="Black Beard Barber Shop" loading="lazy">
-                            <div class="project-overlay">
-                                <span class="btn-view-preview">Ver Detalhes</span>
-                            </div>
+            <div class="bg-darkCard p-8 rounded-xl border border-zinc-800 shadow-2xl">
+                <form id="contactForm" class="space-y-5">
+                    <div>
+                        <label class="block text-sm font-medium text-zinc-400 mb-1">Nome completo *</label>
+                        <input type="text" id="nome" required class="w-full bg-darkBg border border-zinc-700 rounded-md p-3 text-white focus:border-gold focus:ring-1 focus:ring-gold outline-none transition">
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                        <div>
+                            <label class="block text-sm font-medium text-zinc-400 mb-1">WhatsApp *</label>
+                            <input type="tel" id="whatsapp" required class="w-full bg-darkBg border border-zinc-700 rounded-md p-3 text-white focus:border-gold focus:ring-1 focus:ring-gold outline-none transition" placeholder="(00) 00000-0000">
                         </div>
-                        <div class="project-info">
-                            <span class="project-cat">Barbearia</span>
-                            <h3 class="project-name">BLACK BEARD</h3>
-                            <p class="project-desc">"Landing page moderna para uma barbearia, com apresentação dos serviços, galeria, depoimentos, informações de contato e chamada para agendamento."</p>
-                            <div class="project-actions">
-                                <button class="btn btn-sm btn-outline" onclick="openModal(1)">VER PROJETO</button>
-                                <a href="https://barbeariaexemplo-gamma.vercel.app/" target="_blank" class="btn btn-sm btn-primary">VISITAR SITE ↗</a>
-                            </div>
+                        <div>
+                            <label class="block text-sm font-medium text-zinc-400 mb-1">E-mail</label>
+                            <input type="email" id="email" class="w-full bg-darkBg border border-zinc-700 rounded-md p-3 text-white focus:border-gold focus:ring-1 focus:ring-gold outline-none transition">
                         </div>
                     </div>
-
-                    <!-- PROJETO 02 -->
-                    <div class="project-card" data-project="2">
-                        <div class="project-img-wrapper" onclick="openModal(2)">
-                            <img src="img/sabor-brasa.png" alt="Sabor & Brasa Restaurante" loading="lazy">
-                            <div class="project-overlay">
-                                <span class="btn-view-preview">Ver Detalhes</span>
-                            </div>
-                        </div>
-                        <div class="project-info">
-                            <span class="project-cat">Restaurante</span>
-                            <h3 class="project-name">SABOR & BRASA</h3>
-                            <p class="project-desc">"Site profissional para restaurante, com destaque para o cardápio, apresentação do estabelecimento, galeria, avaliações e contato."</p>
-                            <div class="project-actions">
-                                <button class="btn btn-sm btn-outline" onclick="openModal(2)">VER PROJETO</button>
-                                <a href="https://restauranteexemplo-mu.vercel.app/" target="_blank" class="btn btn-sm btn-primary">VISITAR SITE ↗</a>
-                            </div>
-                        </div>
+                    <div>
+                        <label class="block text-sm font-medium text-zinc-400 mb-1">Tipo de negócio *</label>
+                        <input type="text" id="negocio" required class="w-full bg-darkBg border border-zinc-700 rounded-md p-3 text-white focus:border-gold focus:ring-1 focus:ring-gold outline-none transition" placeholder="Ex: Barbearia, Advogado, Loja de roupas...">
                     </div>
-
-                    <!-- PROJETO 03 -->
-                    <div class="project-card" data-project="3">
-                        <div class="project-img-wrapper" onclick="openModal(3)">
-                            <img src="img/personal.png" alt="Lucas Almeida Personal Trainer" loading="lazy">
-                            <div class="project-overlay">
-                                <span class="btn-view-preview">Ver Detalhes</span>
-                            </div>
-                        </div>
-                        <div class="project-info">
-                            <span class="project-cat">Personal Trainer</span>
-                            <h3 class="project-name">LUCAS ALMEIDA</h3>
-                            <p class="project-desc">"Site profissional para personal trainer, apresentando serviços, metodologia, resultados, depoimentos e formas de contato."</p>
-                            <div class="project-actions">
-                                <button class="btn btn-sm btn-outline" onclick="openModal(3)">VER PROJETO</button>
-                                <a href="https://personalexemplo.vercel.app/" target="_blank" class="btn btn-sm btn-primary">VISITAR SITE ↗</a>
-                            </div>
-                        </div>
+                    <div>
+                        <label class="block text-sm font-medium text-zinc-400 mb-1">Mensagem ou ideia do projeto</label>
+                        <textarea id="mensagem" rows="4" class="w-full bg-darkBg border border-zinc-700 rounded-md p-3 text-white focus:border-gold focus:ring-1 focus:ring-gold outline-none transition resize-none"></textarea>
                     </div>
-                </div>
+                    <button type="submit" class="w-full bg-gold text-black font-bold py-4 rounded-md hover:bg-goldHover transition duration-300 shadow-lg shadow-gold/20">
+                        SOLICITAR ORÇAMENTO PELO WHATSAPP
+                    </button>
+                </form>
             </div>
-        </section>
-
-        <!-- SERVIÇOS -->
-        <section id="servicos" class="services section">
-            <div class="container">
-                <div class="section-header text-center">
-                    <span class="section-tag">SOLUÇÕES</span>
-                    <h2 class="section-title">O QUE POSSO FAZER PELO SEU NEGÓCIO</h2>
-                </div>
-
-                <div class="services-grid">
-                    <div class="service-card">
-                        <div class="service-num">01</div>
-                        <h3>SITE INSTITUCIONAL</h3>
-                        <p>"Apresente sua empresa, serviços, localização e formas de contato de maneira profissional."</p>
-                    </div>
-                    <div class="service-card">
-                        <div class="service-num">02</div>
-                        <h3>LANDING PAGE</h3>
-                        <p>"Uma página focada em apresentar seu negócio e transformar visitantes em clientes."</p>
-                    </div>
-                    <div class="service-card">
-                        <div class="service-num">03</div>
-                        <h3>SITE PARA PROFISSIONAIS</h3>
-                        <p>"Sites personalizados para personal trainers, fotógrafos, barbeiros, salões, profissionais autônomos e outros serviços."</p>
-                    </div>
-                    <div class="service-card">
-                        <div class="service-num">04</div>
-                        <h3>CARDÁPIO / CATÁLOGO</h3>
-                        <p>"Apresente produtos, serviços, preços e informações de forma organizada e fácil de consultar."</p>
-                    </div>
-                    <div class="service-card service-highlight-card">
-                        <div class="service-num">05</div>
-                        <h3>SITE PERSONALIZADO</h3>
-                        <p>"Um projeto criado de acordo com a identidade e as necessidades do seu negócio."</p>
-                    </div>
-                </div>
-
-                <p class="services-footer-note">"Cada projeto pode ser adaptado ao negócio, identidade visual e objetivo do cliente."</p>
-            </div>
-        </section>
-
-        <!-- PREÇOS -->
-        <section id="precos" class="pricing section">
-            <div class="container">
-                <div class="section-header text-center">
-                    <span class="section-tag">INVESTIMENTO</span>
-                    <h2 class="section-title">PLANOS</h2>
-                    <p class="section-subtitle">"Opções para diferentes necessidades."</p>
-                </div>
-
-                <div class="pricing-grid">
-                    <!-- PLANO ESSENCIAL -->
-                    <div class="price-card">
-                        <div class="price-header">
-                            <h3>ESSENCIAL</h3>
-                            <div class="price-value">
-                                <span class="from">A partir de</span>
-                                <span class="amount">R$ 200</span>
-                            </div>
-                        </div>
-                        <ul class="price-features">
-                            <li>✓ Página profissional</li>
-                            <li>✓ Design responsivo</li>
-                            <li>✓ Botão para WhatsApp</li>
-                            <li>✓ Informações do negócio</li>
-                            <li>✓ Links para redes sociais</li>
-                            <li>✓ Publicação do site</li>
-                        </ul>
-                        <a href="https://wa.me/5551992934189?text=Olá%20Gabriel,%20tenho%20interesse%20no%20Plano%20Essencial." target="_blank" class="btn btn-outline btn-full">QUERO ESSE</a>
-                    </div>
-
-                    <!-- PLANO PROFISSIONAL (DESTAQUE) -->
-                    <div class="price-card featured">
-                        <div class="featured-tag">MAIS PROCURADO</div>
-                        <div class="price-header">
-                            <h3>PROFISSIONAL</h3>
-                            <div class="price-value">
-                                <span class="from">A partir de</span>
-                                <span class="amount">R$ 400</span>
-                            </div>
-                        </div>
-                        <ul class="price-features">
-                            <li>✓ Site com várias seções</li>
-                            <li>✓ Design personalizado</li>
-                            <li>✓ Galeria de imagens</li>
-                            <li>✓ Serviços / produtos</li>
-                            <li>✓ WhatsApp integrado</li>
-                            <li>✓ Banco de dados</li>
-                            <li>✓ Localização e Redes</li>
-                            <li>✓ Publicação do site</li>
-                        </ul>
-                        <a href="https://wa.me/5551992934189?text=Olá%20Gabriel,%20tenho%20interesse%20no%20Plano%20Profissional." target="_blank" class="btn btn-primary btn-full">QUERO ESSE</a>
-                    </div>
-
-                    <!-- PLANO PERSONALIZADO -->
-                    <div class="price-card">
-                        <div class="price-header">
-                            <h3>PERSONALIZADO</h3>
-                            <div class="price-value">
-                                <span class="from">Sob consulta</span>
-                                <span class="amount">CONSULTE</span>
-                            </div>
-                        </div>
-                        <ul class="price-features">
-                            <li>✓ Projeto totalmente sob medida</li>
-                            <li>✓ Funcionalidades específicas</li>
-                            <li>✓ Estrutura adaptada ao negócio</li>
-                            <li>✓ Orçamento conforme necessidade</li>
-                        </ul>
-                        <a href="https://wa.me/5551992934189?text=Olá%20Gabriel,%20gostaria%20de%20fazer%20um%20orçamento%20personalizado." target="_blank" class="btn btn-outline btn-full">FAZER ORÇAMENTO</a>
-                    </div>
-                </div>
-
-                <p class="pricing-note">"Os valores são iniciais e podem variar conforme a complexidade e as necessidades de cada projeto."</p>
-            </div>
-        </section>
-
-        <!-- COMO FUNCIONA -->
-        <section class="process section">
-            <div class="container">
-                <div class="section-header text-center">
-                    <span class="section-tag">ETAPAS</span>
-                    <h2 class="section-title">COMO FUNCIONA</h2>
-                </div>
-
-                <div class="process-grid">
-                    <div class="process-item">
-                        <div class="process-number">01</div>
-                        <h3>VOCÊ ME CONTA SUA IDEIA</h3>
-                        <p>"Conversamos sobre seu negócio, seus objetivos e o que você precisa."</p>
-                    </div>
-                    <div class="process-item">
-                        <div class="process-number">02</div>
-                        <h3>EU CRIO O SITE</h3>
-                        <p>"Desenvolvo o visual e a estrutura pensando na sua marca e no seu público."</p>
-                    </div>
-                    <div class="process-item">
-                        <div class="process-number">03</div>
-                        <h3>VOCÊ APROVA</h3>
-                        <p>"Faço os ajustes necessários para deixar o projeto do jeito que você imaginou."</p>
-                    </div>
-                    <div class="process-item">
-                        <div class="process-number">04</div>
-                        <h3>SEU SITE VAI PARA O AR</h3>
-                        <p>"Depois da aprovação, o site é publicado e fica disponível para seus clientes."</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- DIFERENCIAIS -->
-        <section class="differentials section">
-            <div class="container">
-                <div class="section-header text-center">
-                    <span class="section-tag">VANTAGENS</span>
-                    <h2 class="section-title">POR QUE TER UM SITE?</h2>
-                </div>
-
-                <div class="diff-grid">
-                    <div class="diff-card">
-                        <div class="diff-icon">🎯</div>
-                        <h3>VISUAL PROFISSIONAL</h3>
-                        <p>"Passe mais confiança para seus clientes."</p>
-                    </div>
-                    <div class="diff-card">
-                        <div class="diff-icon">📱</div>
-                        <h3>ACESSO PELO CELULAR</h3>
-                        <p>"Seu negócio disponível em qualquer lugar."</p>
-                    </div>
-                    <div class="diff-card">
-                        <div class="diff-icon">💬</div>
-                        <h3>CONTATO FACILITADO</h3>
-                        <p>"Botões para WhatsApp, Instagram e outras formas de contato."</p>
-                    </div>
-                    <div class="diff-card">
-                        <div class="diff-icon">🌐</div>
-                        <h3>SUA MARCA NA INTERNET</h3>
-                        <p>"Tenha um espaço próprio para apresentar seu negócio."</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- CTA IMPACTANTE -->
-        <section class="cta-banner section">
-            <div class="container text-center">
-                <h2 class="cta-title">SEU NEGÓCIO MERECE UM SITE À ALTURA.</h2>
-                <p class="cta-desc">"Vamos transformar sua ideia em uma presença profissional na internet."</p>
-                <div class="cta-buttons">
-                    <a href="https://wa.me/5551992934189?text=Olá%20Gabriel,%20quero%20fazer%20meu%20orçamento." target="_blank" class="btn btn-primary btn-lg">FAZER MEU ORÇAMENTO</a>
-                    <a href="#projetos" class="btn btn-outline btn-lg">VER PROJETOS</a>
-                </div>
-            </div>
-        </section>
-
-        <!-- CONTATO -->
-        <section id="contato" class="contact section">
-            <div class="container">
-                <div class="section-header text-center">
-                    <span class="section-tag">FALE COMIGO</span>
-                    <h2 class="section-title">SOLICITE SEU ORÇAMENTO</h2>
-                </div>
-
-                <div class="contact-grid">
-                    <div class="contact-info-box">
-                        <h3>Vamos conversar sobre seu projeto?</h3>
-                        <p>Preencha o formulário ou entre em contato diretamente pelos canais abaixo. Retorno rápido para tirar suas dúvidas.</p>
-                        
-                        <div class="contact-channels">
-                            <a href="https://wa.me/5551992934189?text=Olá%20Gabriel,%20gostaria%20de%20falar%20sobre%20um%20site." target="_blank" class="channel-item">
-                                <span class="channel-icon">💬</span>
-                                <div>
-                                    <strong>WhatsApp</strong>
-                                    <span>(51) 99293-4189</span>
-                                </div>
-                            </a>
-                            <a href="https://instagram.com" target="_blank" class="channel-item">
-                                <span class="channel-icon">📸</span>
-                                <div>
-                                    <strong>Instagram</strong>
-                                    <span>@gabriel.devweb</span>
-                                </div>
-                            </a>
-                            <a href="mailto:contato@gabrieldev.com" class="channel-item">
-                                <span class="channel-icon">✉️</span>
-                                <div>
-                                    <strong>E-mail</strong>
-                                    <span>contato@gabrieldev.com</span>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-
-                    <form id="contactForm" class="contact-form" onsubmit="sendWhatsAppMessage(event)">
-                        <div class="form-group">
-                            <label for="nome">Seu Nome</label>
-                            <input type="text" id="nome" required placeholder="Ex: João Silva">
-                        </div>
-                        <div class="form-group">
-                            <label for="whatsapp">Seu WhatsApp</label>
-                            <input type="tel" id="whatsapp" required placeholder="Ex: (51) 99999-9999">
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Seu E-mail</label>
-                            <input type="email" id="email" placeholder="Ex: joao@email.com">
-                        </div>
-                        <div class="form-group">
-                            <label for="negocio">Tipo de Negócio</label>
-                            <input type="text" id="negocio" required placeholder="Ex: Barbearia, Restaurante, Personal...">
-                        </div>
-                        <div class="form-group">
-                            <label for="mensagem">Mensagem / Ideia</label>
-                            <textarea id="mensagem" rows="4" required placeholder="Conte um pouco sobre o que você precisa..."></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary btn-full">SOLICITAR ORÇAMENTO</button>
-                    </form>
-                </div>
-            </div>
-        </section>
-    </main>
+        </div>
+    </section>
 
     <!-- FOOTER -->
-    <footer class="footer">
-        <div class="container footer-content">
-            <div class="footer-brand">
-                <span class="footer-logo">GABRIEL</span>
-                <p class="footer-desc">Desenvolvimento web para negócios que querem crescer.</p>
-            </div>
-            <div class="footer-links">
-                <a href="#inicio">Início</a>
-                <a href="#projetos">Projetos</a>
-                <a href="#servicos">Serviços</a>
-                <a href="#precos">Preços</a>
-                <a href="#contato">Contato</a>
-            </div>
-            <div class="footer-socials">
-                <a href="https://wa.me/5551992934189" target="_blank">WhatsApp</a>
-                <a href="https://instagram.com" target="_blank">Instagram</a>
-                <a href="mailto:contato@gabrieldev.com">E-mail</a>
-            </div>
-            <p class="footer-copy">© 2026 Gabriel. Todos os direitos reservados.</p>
-        </div>
+    <footer class="py-8 bg-black border-t border-zinc-900 text-center">
+        <p class="text-zinc-600 text-sm">
+            &copy; 2026 Gabriel Molinari - Desenvolvedor Web. Todos os direitos reservados.
+        </p>
     </footer>
 
-    <!-- MODAL / PREVIEW DOS PROJETOS -->
-    <div id="projectModal" class="modal">
-        <div class="modal-content">
-            <button class="modal-close" onclick="closeModal()">&times;</button>
-            <img id="modalImage" src="" alt="Preview">
-            <div class="modal-body">
-                <span id="modalCat" class="modal-category"></span>
-                <h3 id="modalTitle"></h3>
-                <p id="modalDesc"></p>
-                <div id="modalLinkBox"></div>
-            </div>
-        </div>
-    </div>
-
     <!-- BOTÃO FLUTUANTE WHATSAPP -->
-    <a href="https://wa.me/5551992934189?text=Olá%20Gabriel,%20vi%20seu%20portfólio%20e%20gostaria%20de%20falar%20sobre%20um%20site." target="_blank" class="whatsapp-float" aria-label="Fale conosco no WhatsApp">
-        💬
+    <a href="https://wa.me/5551992934189" target="_blank" class="fixed bottom-6 right-6 bg-green-500 text-white w-14 h-14 rounded-full flex items-center justify-center text-3xl shadow-2xl hover:scale-110 transition-transform duration-300 z-50">
+        <i class="fa-brands fa-whatsapp"></i>
     </a>
 
-    <!-- SCRIPT JS -->
+    <!-- VINCULANDO O ARQUIVO SCRIPT.JS EXTERNO -->
     <script src="js/script.js"></script>
 </body>
 </html>
